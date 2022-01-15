@@ -1,0 +1,19 @@
+{
+  "name": "wordle-validate",
+  "version": "0.0.0",
+  "description": "wordle guess-validation functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chantastic/wordle-validate.git"
+  },
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chantastic/wordle-validate/issues"
+  },
+  "homepage": "https://github.com/chantastic/wordle-validate#readme"
+}
