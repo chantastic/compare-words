@@ -4,7 +4,7 @@
   "description": "wordle guess-validation functions",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/chantastic/wordle-validate/issues"
   },
-  "homepage": "https://github.com/chantastic/wordle-validate#readme"
+  "homepage": "https://github.com/chantastic/wordle-validate#readme",
+  "devDependencies": {
+    "ava": "^4.0.1"
+  }
 }
