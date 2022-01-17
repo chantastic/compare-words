@@ -12,6 +12,16 @@ test("throws with without answer", (t) => {
   t.is(error.message, "Answer must be a string.");
 });
 
+test("returns for partial guess", (t) => {
+  t.deepEqual(assess("sales", "spa"), [
+    ["s", "correct"],
+    ["p", "absent"],
+    ["a", "present"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+  ]);
+});
+
 test("all letters 'absent'", (t) => {
   t.deepEqual(assess("abcde", "fghij"), [
     ["f", "absent"],
