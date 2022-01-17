@@ -30,11 +30,7 @@ export default function assess(answer, guess) {
     if (guessLetter === answerLetter) {
       return [guessLetter, "correct"];
     }
-    if (
-      guessLetter !== answerLetter &&
-      answer.includes(guessLetter) &&
-      availableLetterPool[guessLetter]
-    ) {
+    if (answer.includes(guessLetter) && availableLetterPool[guessLetter]) {
       availableLetterPool[guessLetter] = availableLetterPool[guessLetter] - 1;
       return [guessLetter, "present"];
     }
