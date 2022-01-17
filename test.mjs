@@ -79,3 +79,16 @@ test("dulpicated letter in guess outnumber those in answer", (t) => {
     ["e", "correct"],
   ]);
 });
+
+test("works with arbritatry length words", (t) => {
+  t.deepEqual(assess("hypnosis", "hip"), [
+    ["h", "correct"],
+    ["i", "present"],
+    ["p", "correct"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+  ]);
+});
