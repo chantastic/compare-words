@@ -4,13 +4,29 @@ export default function assess(answer, guess) {
   }
 
   // build a zipped array from answer to ensure the right array size
-  let zipped = Array.from(answer, (_, i) => [guess[i], answer[i]]);
+  let zippedLetters = Array.from(answer, (_, i) => [answer[i], guess[i]]);
 
-  let result = zipped.map(([guessLetter, answerLetter]) => {
+  let availableLetterPool = zippedLetters.reduce(
+    (accumulator, [answerLetter, guessLetter]) =>
+      answerLetter === guessLetter
+        ? accumulator
+        : {
+            ...accumulator,
+            [answerLetter]: accumulator[answerLetter] + 1 || 1,
+          },
+    {}
+  );
+
+  let result = zippedLetters.map(([answerLetter, guessLetter]) => {
     if (guessLetter === answerLetter) {
       return [guessLetter, "correct"];
     }
-    if (guessLetter !== answerLetter && answer.includes(guessLetter)) {
+    if (
+      guessLetter !== answerLetter &&
+      answer.includes(guessLetter) &&
+      availableLetterPool[guessLetter]
+    ) {
+      availableLetterPool[guessLetter] = availableLetterPool[guessLetter] - 1;
       return [guessLetter, "present"];
     }
     return [guessLetter, "absent"];

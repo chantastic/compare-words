@@ -51,3 +51,21 @@ test("some letters of all types, but no duplicate letters", (t) => {
     ["g", "present"],
   ]);
 });
+
+test("dulpicated letter in guess outnumber those in answer", (t) => {
+  t.deepEqual(assess("sales", "swiss"), [
+    ["s", "correct"],
+    ["w", "absent"],
+    ["i", "absent"],
+    ["s", "absent"],
+    ["s", "correct"],
+  ]);
+
+  t.deepEqual(assess("abate", "bible"), [
+    ["b", "present"],
+    ["i", "absent"],
+    ["b", "absent"],
+    ["l", "absent"],
+    ["e", "correct"],
+  ]);
+});
