@@ -92,3 +92,13 @@ test("works with arbritatry length words", (t) => {
     [undefined, "absent"],
   ]);
 });
+
+test("works with no guess", (t) => {
+  t.deepEqual(assess("guess"), [
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+    [undefined, "absent"],
+  ]);
+});
