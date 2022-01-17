@@ -31,3 +31,13 @@ test("all letters 'correct'", (t) => {
     ["s", "correct"],
   ]);
 });
+
+test("some letters 'correct', others 'absent'", (t) => {
+  t.deepEqual(assess("bonus", "bogus"), [
+    ["b", "correct"],
+    ["o", "correct"],
+    ["g", "absent"],
+    ["u", "correct"],
+    ["s", "correct"],
+  ]);
+});
