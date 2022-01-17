@@ -1,9 +1,5 @@
-// correct | present | absent
-
-export function expand(word) {
-  if (typeof word !== "string") {
-    throw new TypeError("Guess must be a string.");
+export default function assess(answer, guess) {
+  if (typeof answer !== "string") {
+    throw new TypeError("Answer must be a string.");
   }
-
-  return word.split("").map((letter) => [letter, undefined]);
 }
