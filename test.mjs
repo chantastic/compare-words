@@ -12,12 +12,22 @@ test("throws with without answer", (t) => {
   t.is(error.message, "Answer must be a string.");
 });
 
-test("all letters absent", (t) => {
+test("all letters 'absent'", (t) => {
   t.deepEqual(assess("abcde", "fghij"), [
     ["f", "absent"],
     ["g", "absent"],
     ["h", "absent"],
     ["i", "absent"],
     ["j", "absent"],
+  ]);
+});
+
+test("all letters 'correct'", (t) => {
+  t.deepEqual(assess("bonus", "bonus"), [
+    ["b", "correct"],
+    ["o", "correct"],
+    ["n", "correct"],
+    ["u", "correct"],
+    ["s", "correct"],
   ]);
 });

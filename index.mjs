@@ -3,9 +3,15 @@ export default function assess(answer, guess) {
     throw new TypeError("Answer must be a string.");
   }
 
-  let result;
+  // build a zipped array from answer to ensure the right array size
+  let zipped = Array.from(answer, (_, i) => [guess[i], answer[i]]);
 
-  result = guess.split("").map((letter) => [letter, "absent"]);
+  let result = zipped.map(([guessLetter, answerLetter]) => {
+    if (guessLetter === answerLetter) {
+      return [guessLetter, "correct"];
+    }
+    return [guessLetter, "absent"];
+  });
 
   return result;
 }
