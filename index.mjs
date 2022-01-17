@@ -1,3 +1,12 @@
+/**
+ * Assess the correctness of a guess word against an answer word.
+ *
+ * @param answer {string} - The answer word
+ * @param guess {string} - The guess word
+ * @returns {[string, "correct" | "present" | "absent"][]} An array of tuples containing the letter and its relative precision
+ *
+ * @beta
+ */
 export default function assess(answer, guess) {
   if (typeof answer !== "string") {
     throw new TypeError("Answer must be a string.");
