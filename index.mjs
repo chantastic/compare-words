@@ -10,6 +10,9 @@ export default function assess(answer, guess) {
     if (guessLetter === answerLetter) {
       return [guessLetter, "correct"];
     }
+    if (guessLetter !== answerLetter && answer.includes(guessLetter)) {
+      return [guessLetter, "present"];
+    }
     return [guessLetter, "absent"];
   });
 

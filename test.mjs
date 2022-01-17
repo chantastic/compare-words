@@ -41,3 +41,13 @@ test("some letters 'correct', others 'absent'", (t) => {
     ["s", "correct"],
   ]);
 });
+
+test("some letters of all types, but no duplicate letters", (t) => {
+  t.deepEqual(assess("cigar", "clang"), [
+    ["c", "correct"],
+    ["l", "absent"],
+    ["a", "present"],
+    ["n", "absent"],
+    ["g", "present"],
+  ]);
+});
