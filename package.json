@@ -1,15 +1,15 @@
 {
-  "name": "word-match",
+  "name": "compare-words",
   "version": "0.0.1",
   "description": "wordle guess-validation functions",
-  "main": "./dist/word-match.cjs",
-  "module": "./dist/word-match.module.js",
-  "unpkg": "./dist/word-match.umd.js",
+  "main": "./dist/compare-words.cjs",
+  "module": "./dist/compare-words.module.js",
+  "unpkg": "./dist/compare-words.umd.js",
   "type": "module",
   "source": "index.mjs",
   "exports": {
-    "require": "./dist/word-match.cjs",
-    "default": "./dist/word-match.modern.js"
+    "require": "./dist/compare-words.cjs",
+    "default": "./dist/compare-words.modern.js"
   },
   "files": [
     "dist"
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chantastic/wordle-validate.git"
+    "url": "git+https://github.com/chantastic/compare-words.git"
   },
   "author": "Michael Chan <mijoch@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chantastic/wordle-validate/issues"
+    "url": "https://github.com/chantastic/compare-words/issues"
   },
-  "homepage": "https://github.com/chantastic/wordle-validate#readme",
+  "homepage": "https://github.com/chantastic/compare-words#readme",
   "devDependencies": {
     "ava": "^4.0.1",
     "microbundle": "^0.14.2"

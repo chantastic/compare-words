@@ -1,6 +1,6 @@
 # Word Match
 
-`word-match` is a small utility for assessing how much one word matches another.
+`compare-words` is a small utility for assessing how much one word matches another.
 
 It's inspired by [https://www.powerlanguage.co.uk/wordle/](Wordle).
 
@@ -14,7 +14,7 @@ It's inspired by [https://www.powerlanguage.co.uk/wordle/](Wordle).
 ## Example
 
 ```js
-import assess from "word-match";
+import assess from "compare-words";
 
 assess("begal", "beans");
 ```
