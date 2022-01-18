@@ -31,6 +31,12 @@ assess("begal", "beans");
 ];
 ```
 
+## Install
+
+```bash
+npm i compare-words
+```
+
 ## Resources
 
 - [source](./index.mjs)
