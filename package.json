@@ -1,6 +1,6 @@
 {
-  "name": "wordle-validate",
-  "version": "0.0.0",
+  "name": "word-match",
+  "version": "0.0.1",
   "description": "wordle guess-validation functions",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/chantastic/wordle-validate#readme",
   "devDependencies": {
     "ava": "^4.0.1"
-  }
+  },
+  "keywords": [
+    "wordle"
+  ]
 }
