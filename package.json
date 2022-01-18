@@ -2,9 +2,19 @@
   "name": "word-match",
   "version": "0.0.1",
   "description": "wordle guess-validation functions",
-  "main": "index.js",
+  "main": "./dist/word-match.cjs",
+  "module": "./dist/word-match.module.js",
+  "unpkg": "./dist/word-match.umd.js",
+  "type": "module",
+  "source": "index.mjs",
+  "exports": {
+    "require": "./dist/word-match.cjs",
+    "default": "./dist/word-match.modern.js"
+  },
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +27,8 @@
   },
   "homepage": "https://github.com/chantastic/wordle-validate#readme",
   "devDependencies": {
-    "ava": "^4.0.1"
+    "ava": "^4.0.1",
+    "microbundle": "^0.14.2"
   },
   "keywords": [
     "wordle"
