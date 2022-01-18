@@ -11,6 +11,9 @@
     "require": "./dist/word-match.cjs",
     "default": "./dist/word-match.modern.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "ava",
     "build": "microbundle",
