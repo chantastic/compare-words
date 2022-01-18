@@ -4,12 +4,10 @@
  * @param answer {string} - The answer word
  * @param guess {string} - The guess word
  * @returns {[string, "correct" | "present" | "absent"][]} An array of tuples containing the letter and its relative precision
- *
- * @beta
  */
 export default function assess(answer, guess = "") {
-  if (typeof answer !== "string") {
-    throw new TypeError("Answer must be a string.");
+  if (typeof answer !== "string" || typeof guess !== "string") {
+    throw new TypeError("Inputs must be a string.");
   }
 
   // build a zipped array from answer to ensure the right array size

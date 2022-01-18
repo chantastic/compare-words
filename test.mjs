@@ -9,7 +9,18 @@ test("throws with without answer", (t) => {
     { instanceOf: TypeError }
   );
 
-  t.is(error.message, "Answer must be a string.");
+  t.is(error.message, "Inputs must be a string.");
+});
+
+test("throws when guess isn't string", (t) => {
+  const error = t.throws(
+    () => {
+      assess("guess", 1);
+    },
+    { instanceOf: TypeError }
+  );
+
+  t.is(error.message, "Inputs must be a string.");
 });
 
 test("returns for partial guess", (t) => {
