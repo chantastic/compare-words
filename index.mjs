@@ -1,3 +1,5 @@
+/* Copyright © Michael Chan, 2022, MIT License */
+
 /**
  * Assess the correctness of a guess word against an answer word.
  *
